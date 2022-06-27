@@ -26,7 +26,7 @@
                 <a href="" class="nav__item">Community</a>
             </div>
         </nav>
-        <div><label><button class="btt__start">Get started</button></label></div>
+        <div class="btt__header"><label><button class="btt__start">Get started</button></label></div>
     </header>
     <main>
         <section class="home">
@@ -94,39 +94,50 @@
             <article>
                 <h2 class="evidencia">What they've said</h2>
             </article>
-            <article>
-                <div class="carrusel__card">
-                    <div class="exponente">
-                        <img src="img/avatar-anisha.png" alt="exponente">
-                    </div>
-                    <div class="exp__name">Ali Bravo</div>
-                    <div class="comentario">
-                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more
-                            cross-channel confusion and everyone is much more focused.”
-                        </p>
-                    </div>
+            <article id="carruselNav">
+                <input type="radio" name="carrusel" id="radio1" checked>
+                <input type="radio" name="carrusel" id="radio2">
+                <input type="radio" name="carrusel" id="radio3">
+
+                <div class="carrusel__card" id="tarjetaCarrusel1-1">
+                    <label for="radio1">
+                        <div class="exponente" id="#tarjetaCarrusel1-1">
+                            <img src="img/avatar-anisha.png" alt="exponente">
+                        </div>
+                        <div class="exp__name">Anisha Li</div>
+                        <div class="comentario">
+                            <p>“Manage has supercharged our team´s workflow. The ability to maintain visibility on
+                                larger milestones at all times keeps everyone motivated.”
+                            </p>
+                        </div>
+                    </label>
                 </div>
-                <div class="carrusel__card">
-                    <div class="exponente">
-                        <img src="img/avatar-ali.png" alt="exponente">
-                    </div>
-                    <div class="exp__name">Ali Bravo</div>
-                    <div class="comentario">
-                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more
-                            cross-channel confusion and everyone is much more focused.”
-                        </p>
-                    </div>
+                <div class="carrusel__card" id="tarjetaCarrusel1-2">
+                    <label for="radio2">
+                        <div class="exponente">
+                            <img src="img/avatar-ali.png" alt="exponente">
+                        </div>
+                        <div class="exp__name">Ali Bravo</div>
+                        <div class="comentario">
+                            <p>“We have been able to cancel so many other subscriptions since using manage. There ir no
+                                more
+                                cross-channel confusion and everyone is much more focused.”
+                            </p>
+                        </div>
+                    </label>
                 </div>
-                <div class="carrusel__card">
-                    <div class="exponente">
-                        <img src="img/avatar-richard.png" alt="exponente">
-                    </div>
-                    <div class="exp__name">Ali Bravo</div>
-                    <div class="comentario">
-                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more
-                            cross-channel confusion and everyone is much more focused.”
-                        </p>
-                    </div>
+                <div class="carrusel__card" id="tarjetaCarrusel1-3">
+                    <label for="radio3">
+                        <div class="exponente">
+                            <img src="img/avatar-richard.png" alt="exponente">
+                        </div>
+                        <div class="exp__name">Richard Watts</div>
+                        <div class="comentario">
+                            <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I
+                                can´t stop recommending them to everyone i talk to!”
+                            </p>
+                        </div>
+                    </label>
                 </div>
             </article>
             <article>
@@ -177,7 +188,9 @@
                         <label><input type="text" placeholder="Update in your inbox..." class="footer__input"></label>
                         <label><button class="btt__go">Go</button></label>
                     </form>
-                    <div><p class="derechos">Copyright 2020. All Rights Reserved</p></div>
+                    <div>
+                        <p class="derechos">Copyright 2020. All Rights Reserved</p>
+                    </div>
                 </div>
             </article>
         </section>

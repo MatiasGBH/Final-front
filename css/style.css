@@ -36,7 +36,7 @@ body::after {
     content: '';
     position: absolute;
     left: -250px;
-    bottom: -735px;
+    bottom: -500px;
     width: 38rem;
     height: 43rem;
     background-size: 100%;
@@ -236,14 +236,15 @@ section article {
     box-sizing: border-box;
     padding: 30px;
     margin-top: 20px;
+    text-align: center;
 }
 
-.exponente img {
+label .exponente img {
     width: 100px;
     margin-top: -80%;
 }
 
-.exp__name {
+label .exp__name {
     color: var(--color-primario-2);
     font-weight: 700;
 }
@@ -307,11 +308,13 @@ footer {
     box-sizing: border-box;
     padding: 3rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .footer__cont1 {
     display: flex;
     width: 30%;
+    min-width: 290px;
     justify-content: space-between;
 }
 
@@ -350,6 +353,7 @@ footer {
 .footer__cont2 {
     display: flex;
     width: 55%;
+    min-width: 290px;
     justify-content: space-around;
 }
 
@@ -399,4 +403,149 @@ footer {
 }
 .derechos{
     color: var(--color-neutro-1);
+}
+#carruselNav input[type=radio]{
+    display: none;
+} 
+/*viwport tablet*/
+@media (max-width:1279px){
+    /*header*/
+    .cabecera{
+        justify-content: space-between;
+    }
+    .btt__header{
+        display: none;
+    }
+    /*carrusel*/
+   .carrusel{
+        position: relative;
+   }
+    .carrusel article:nth-child(2){
+        position: relative;
+        height: 256px;
+        margin-bottom: 2rem;
+   }
+    #carruselNav{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto auto auto;
+        width: min-content;
+        height: auto;
+    }
+    #carruselNav input[type=radio]{
+        margin: 3rem 0;
+        display: initial;
+    }
+   .carrusel__card{
+        /*position: absolute;*/
+        display: none;
+        grid-column: 1/4;
+        grid-row: 1;
+   }
+   #radio1:checked ~ #tarjetaCarrusel1-1,
+   #radio2:checked ~ #tarjetaCarrusel1-2,
+   #radio3:checked ~ #tarjetaCarrusel1-3{
+        display: initial;
+   }
+
+   /*footer*/
+    .footer__datos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__cont1{
+        width: 65%;
+    }
+    .footer__cont2{
+        width: 75%;
+    }
+}
+/*viwport mobile*/
+@media (max-width:769px){
+    /*header*/
+    .cabecera{
+        justify-content: space-between;
+    }
+    .btt__header{
+        display: none;
+    }
+    .nav__label{
+       display: initial;
+       cursor: pointer;
+    }
+    .nav__menu{
+        content: '';
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        position: fixed;
+        right: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: var(--color-primario-2);
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 10px;
+        transition: .5s;
+        z-index: 1500;
+    }
+    .nav__menu a{
+        color: var(--color-neutro-4);
+    }
+    .nav__input:checked + .nav__menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /*about us*/
+    .home article:nth-child(1){
+        margin-bottom: 5rem;
+    }
+    .diferencia{
+        margin-right: 0;
+    }
+        /*carrusel*/
+   .carrusel{
+    position: relative;
+}
+.carrusel article:nth-child(2){
+    position: relative;
+    height: 256px;
+    margin-bottom: 2rem;
+}
+#carruselNav{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+    width: min-content;
+    height: auto;
+}
+#carruselNav input[type=radio]{
+    margin: 3rem 0;
+    display: initial;
+}
+.carrusel__card{
+    /*position: absolute;*/
+    display: none;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+#radio1:checked ~ #tarjetaCarrusel1-1,
+#radio2:checked ~ #tarjetaCarrusel1-2,
+#radio3:checked ~ #tarjetaCarrusel1-3{
+    display: initial;
+}
+
+/*footer*/
+.last__start{
+    flex-direction: column;
+}
+.footer__datos{
+    flex-direction: column;
+    align-items: center;
+}
+.footer__cont1{
+    width: 65%;
+}
+.footer__cont2{
+    width: 75%;
+}
 }
